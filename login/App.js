@@ -2,13 +2,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, TextInput, Button, Image } from 'react-native';
 import { BlurView } from 'expo-blur';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase-auth'
 import { firebaseConfig } from 'firebase-config';
 import { initializeApp } from 'firebase/app';
 import { useState } from 'react';
 
 //Imagen de fondo
-const uri='https://i.pinimg.com/236x/81/72/f3/8172f32cc85e02fe8c7cec5f5fd176fb.jpg';
+const uri='https://iphoneros.com/wp-content/uploads/2016/07/verdeipad.jpg';
 
 //Funcion para pantalla de inicio
 function PantallaInicio(){
@@ -24,7 +24,7 @@ function PantallaInicio(){
 //Funcion para pantalla de Login
 function PantallaLogin(){
   const [email,setEmail]=React.useState('')
-  const [password.setPassword]=React.useState('')
+  const [password,setPassword]=React.useState('')
   const app=initializeApp(firebaseConfig);
   const auth=getAuth(app);
 
@@ -137,8 +137,8 @@ const styles = StyleSheet.create({
     width:200,
     height:50,
     borderColor:'#fff',
-    borderRadius:20,
-    backgroundColor:'green',
+    borderRadius:10,
+    backgroundColor:'#587E72',
     alignItems: 'center',
     justifyContent:'center',
     borderColor:'#fff'
